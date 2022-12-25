@@ -1,18 +1,5 @@
 // script.js
 
-// // The timer with reset functionality after pause
-
-// // Set up the reset button
-// const resetButton = document.getElementById("reset");
-// resetButton.addEventListener("click", () => {
-//   isPaused = true;
-// });
-
-// // Starts the timer upon click on board
-// board.addEventListener("click", () => {
-//   isPaused = false;
-// });
-
 class Game {
   constructor(width, height, mines) {
     // Sets the width and height of the board
@@ -136,7 +123,7 @@ class Game {
   // Logic if a game is lost
   game_lost(index) {
     this.reveal_board();
-    this.cells[index].classList.add("flagged");
+    this.cells[index].classList.remove("flagged");
     this.cells[index].classList.remove("revealed");
     this.cells[index].textContent = "💥";
     this.pause_timer();

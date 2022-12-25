@@ -1,6 +1,22 @@
 /* style.css */
+:root {
+  --page: #0a2647;
+  --tile: #489ce6;
+  --background: #205295;
+  --border: #2c74b3;
+  --text: #fff;
+
+  --page-temp: #fff;
+  --tile-temp: #fff;
+  --background-temp: #eee;
+  --border-temp: #ccc;
+  --text-temp: #000;
+}
+
 body {
   font-family: sans-serif;
+  background-color: var(--page);
+  color: var(--text);
 }
 
 h1 {
@@ -18,15 +34,15 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   margin-top: auto;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border);
 }
 
 .cell {
   width: 40px;
   height: 40px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border);
   box-sizing: border-box;
-  background-color: #eee;
+  background-color: var(--background);
   font-size: 20px;
   text-align: center;
   line-height: 40px;
@@ -34,13 +50,11 @@ h1 {
 }
 
 .cell.revealed {
-  background-color: #fff;
+  background-color: var(--tile);
 }
 
 .cell.flagged {
-  background-color: #eee;
-
-  /* background-color: #f00; */
+  background-color: var(--background);
 }
 
 #controls {
@@ -58,12 +72,13 @@ button,
 select,
 span,
 input {
+  color: var(--text);
   padding: 5px 10px;
   font-size: 16px;
   cursor: pointer;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border);
   box-sizing: border-box;
-  background-color: #eee;
+  background-color: var(--background);
   font-size: 20px;
   text-align: center;
 }
@@ -78,4 +93,14 @@ label {
   box-sizing: border-box;
   font-size: 20px;
   text-align: center;
+}
+
+#darkmode {
+  position: sticky;
+
+  left: 15px;
+  bottom: 15px;
+
+  width: 40px;
+  height: 40px;
 }
