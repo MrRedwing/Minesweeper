@@ -115,7 +115,6 @@ class Game {
     ) {
       this.reveal_board();
       this.pause_timer();
-      alert("Congratulations you've won. You're time was " + this.time);
       this.game_state = false;
     }
   }
@@ -128,7 +127,6 @@ class Game {
     this.cells[index].textContent = "💥";
     this.pause_timer();
     this.game_state = false;
-    alert("You lost");
   }
 
   // Clears the tile of a given index
